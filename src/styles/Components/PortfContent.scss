@@ -1,0 +1,80 @@
+@import "../styles.scss";
+
+.portfContent {
+    margin-top: 57px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.projectPreview__cont {
+    display: flex;
+
+    filter: grayscale(100%);
+    background-size: cover;
+    background-position: 50%;
+    width: 80%;
+    // margin-bottom: 20px;
+    height: 165px;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+
+    p {
+        transition: 0.3s;
+        opacity: 0;
+        // color: transparent;
+    }
+    .projInf {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .moreAbout {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        padding-left: 10px;
+        border-bottom: 1px solid white;
+    }
+}
+
+.projectPreview__cont::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s;
+    z-index: 1;
+}
+
+.projectPreview__cont:hover::after {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.projectPreview__cont:hover {
+    p {
+        opacity: 1;
+        color: white;
+    }
+}
+
+.projectPreview__cont > * {
+    position: relative;
+    z-index: 2;
+}
+
+.dotsCont {
+    span {
+        user-select: none;
+        margin-bottom: 15px;
+        margin-right: 5px;
+        color: lightGrey;
+        cursor: pointer;
+        font-size: 50px;
+    }
+}

@@ -1,0 +1,237 @@
+@import "/src/App.scss";
+
+.MySlider {
+    margin-left: 10px;
+    width: 60%;
+    max-height: 100%;
+    height: -webkit-fill-available;
+    display: flex;
+
+    @include phone {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.photo-container {
+    height: 100%;
+    width: 50%;
+    position: relative;
+
+    @include phone {
+        // margin: 0 auto;
+        width: 100%;
+        background-color: #e2e2e2;
+    }
+}
+
+.bg-element-grey {
+    background-color: #e2e2e2;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    width: 96%;
+
+    @include phone {
+        display: none;
+    }
+}
+
+.slideStyles {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    height: 87%;
+    object-fit: cover;
+
+    @include phone {
+        position: relative;
+        height: 100%;
+        width: 80%;
+    }
+}
+
+.bg-element-grey p {
+    display: flex;
+    align-items: flex-end;
+    // height: 91%;
+    justify-content: flex-end;
+    border-bottom: 1px solid black;
+    margin: 0 25px;
+    padding-bottom: 10px;
+}
+
+.slider_info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+
+    @include phone {
+        width: 100%;
+    }
+}
+
+.infoItem {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+
+    @include phone {
+        font-size: 0.9rem;
+    }
+}
+.last {
+    border: none;
+    @include phone {
+        margin-bottom: 10px;
+    }
+}
+
+.about-btn {
+    margin-top: 10px;
+    padding: 0;
+
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    font-size: 1.1rem;
+
+    @include phone {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        margin: 0 auto 10px auto;
+    }
+}
+
+.dotsStyle {
+    // margin: '0 3px',
+    margin-bottom: 15px;
+    margin-right: 5px;
+    color: lightGrey;
+    cursor: pointer;
+    font-size: 50px;
+    @include phone {
+        margin-bottom: 0;
+    }
+}
+
+.activeDot {
+    margin-bottom: 15px;
+    margin-right: 5px;
+    color: black;
+    cursor: pointer;
+    font-size: 50px;
+    @include phone {
+        margin-bottom: 0;
+    }
+}
+
+.sliderStyles {
+    height: 100%;
+    position: relative;
+    margin-left: 20px;
+
+    @include phone {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.leftArrowStyles {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 20px;
+    font-size: 35px;
+    color: transparent;
+    transition: 0.3s;
+    z-index: 11;
+    cursor: pointer;
+    user-select: none;
+    @include phone {
+        color: #fff;
+        left: 10px;
+    }
+}
+
+.rightArrowStyles {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 20px;
+    font-size: 35px;
+    color: transparent;
+    transition: 0.3s;
+    z-index: 11;
+    cursor: pointer;
+    user-select: none;
+
+    @include phone {
+        color: #fff;
+        right: 10px;
+    }
+}
+
+.sliderStyles:hover .leftArrowStyles,
+.sliderStyles:hover .rightArrowStyles {
+    color: #fff;
+}
+
+.slider_info__container {
+    padding: 0 20px;
+
+    @include phone {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 90%;
+    }
+}
+
+.slider_info__h2p {
+    @include phone {
+        text-align: center;
+    }
+}
+
+.dotsContainerStyles {
+    display: flex;
+
+    @include phone {
+        justify-content: center;
+    }
+}
+
+.slidesContainerOverflowStyles {
+    overflow: hidden;
+    height: 100%;
+
+    @media (max-width: 975px) {
+        width: 50%;
+        height: 550px;
+    }
+
+    @media (max-width: 549px) {
+        height: 550px;
+        width: 80%;
+    }
+}
+
+.SlidesContainerStylesWithWidth {
+    height: 100%;
+    @include phone {
+        height: 115%;
+    }
+}

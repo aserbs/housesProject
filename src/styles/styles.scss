@@ -1,0 +1,15 @@
+@import 'reset';
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=M+PLUS+1:wght@400;500;600&family=Montserrat&family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+    @include tablet {
+        font-size: 14px;
+    }
+    @include phone {
+        font-size: 12px;
+    }
+}

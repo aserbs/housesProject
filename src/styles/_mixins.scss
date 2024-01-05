@@ -1,0 +1,20 @@
+@mixin desktop {
+    // Desktop-specific styles here
+    @content;
+  }
+  
+  // Mixin for tablet styles
+  @mixin tablet {
+    @media (max-width: 1204px) {
+      // Tablet-specific styles here
+      @content;
+    }
+  }
+  
+  // Mixin for phone styles
+  @mixin phone {
+    @media (max-width: 975px) {
+      // Phone-specific styles here
+      @content;
+    }
+  }
