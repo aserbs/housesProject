@@ -1,9 +1,24 @@
 import React from 'react'
 import '../App.scss'
-const MainContent = () => {
+import '../styles/Components/MainContent.scss'
+const MainContent = ({ handleNavClick }) => {
   return (
-    <div className='main-content'>What is Lorem Ipsum?
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+    <div className='main-content'>
+      <h2 className='typewriter'>WE CREATE SPACE
+        FOR LIVING </h2>
+      <p>
+        MONO architects are experts in creating stylish, functional public spaces and residential interiors.
+        Regardless of the project purpose, we strive to create a well rounded product: each design element has a specific purpose,
+        there is nothing superfluous. We blend a minimalism
+        approach with modern developments and innovations in order to achieve the perfect balance of comfort and aesthetics.
+      </p>
+      <div className='btns_cont'>
+        {/* <button className='btn-mono' onClick={() => handleNavClick('navContact')}>Зв'язатись зі мною</button>
+        <button className='btn-mono' onClick={() => handleNavClick('navPortfolio')}>Мої проекти</button> */}
+      </div>
+
+
+    </div>
   )
 }
 

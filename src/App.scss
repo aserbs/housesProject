@@ -1,5 +1,10 @@
 @import "./styles/styles.scss";
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .App {
     height: 100vh;
     background-color: #dbdbdb;
@@ -96,6 +101,22 @@ nav {
     }
 }
 
+.deskNav {
+    @include phone {
+        display: none;
+    }
+}
+.phoneNav {
+    display: none;
+    gap: 25px;
+    padding: 0 10px;
+    height: 49px;
+    justify-content: flex-end;
+    @include phone {
+        display: flex;
+    }
+}
+
 .active {
     border-bottom: 1px solid black;
 }
@@ -132,5 +153,27 @@ nav {
     font-size: 1rem;
     @include phone {
         margin: 20px 5px;
+    }
+}
+
+.infoH2 {
+    margin-top: 20px;
+    font-size: 20px;
+    // font-weight: 500;
+    @include phone {
+        margin-top: 10px;
+    }
+}
+
+.deskContent {
+    @include phone {
+        display: none;
+    }
+}
+.mobContent {
+    display: none;
+    flex-direction: column;
+    @include phone {
+        display: flex;
     }
 }

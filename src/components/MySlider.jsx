@@ -2,7 +2,7 @@ import React from 'react';
 import '../components/MySlider.scss';
 import { useState, useRef, useEffect } from 'react';
 import { useCallback } from 'react';
-
+import { useLocation } from 'react-router-dom';
 
 const slideStyles = {
   // position: 'absolute',
@@ -24,7 +24,9 @@ const slidesContainerStyles = {
 
 
 
-const MySlider = ({ slides, parentWidth, currentProject, setActivePortf }) => {
+const MySlider = ({ slides, parentWidth, currentProject, setActivePortf, openedPhoneSlider,
+  setOpenedPhoneSlider }) => {
+  currentProject = currentProject - 1;
   const timerRef = useRef(null);
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,7 +52,6 @@ const MySlider = ({ slides, parentWidth, currentProject, setActivePortf }) => {
     if (timerRef.current) {
       clearTimeout(timerRef.current);
     }
-    console.log('useEf');
     timerRef.current = setTimeout(() => {
       goToNext();
     }, 5000);
@@ -68,8 +69,12 @@ const MySlider = ({ slides, parentWidth, currentProject, setActivePortf }) => {
     transform: `translateX(${-(currentIndex * parentWidth)}px)`,
   });
 
+  const location = useLocation();
+  const hasProject = location.pathname.includes('/project/');
+
   return (
-    <div className='MySlider'>
+    <div className={hasProject ? 'MySlider openedSlider' : 'MySlider'}>
+
       <div className='photo-container'>
         <div className='sliderStyles'>
           <div className='leftArrowStyles' onClick={goToPrevious}>❰</div>
@@ -133,7 +138,7 @@ const MySlider = ({ slides, parentWidth, currentProject, setActivePortf }) => {
               <span>{slides[currentProject].info}</span>
             </div>
           </div>
-          <button className='about-btn'>more about this project</button>
+          {/* <button className='about-btn'>more about this project</button> */}
         </div>
       </div>
     </div>

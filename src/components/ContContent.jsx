@@ -1,9 +1,37 @@
 import React from 'react'
-
+import '../styles/Components/ContContent.scss'
+import { FaInstagram } from "react-icons/fa";
+import { PiTelegramLogo } from "react-icons/pi";
+import { FiMail, FiPhone } from "react-icons/fi";
 const ContContent = () => {
   return (
-    <div>What is Lorem Ipsum?
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+    <div className='contacts_cont'>
+      <h2 className='infoH2'> Не соромтеся звертатися до мене</h2>
+
+      <div className='contItem_cont'>
+        <div className="contItem">
+          <FiPhone size={'25px'} style={{ marginRight: '5px' }} />
+          <span>телефон:</span>
+          <span>+380996164208</span>
+        </div>
+        <div className="contItem">
+          <FaInstagram size={'25px'} style={{ marginRight: '5px' }} />
+          <span>inst:</span>
+          <span>@asdasd</span>
+        </div>
+        <div className="contItem">
+          <PiTelegramLogo size={'25px'} style={{ marginRight: '5px' }} />
+          <span>telegram:</span>
+          <span>@asdas</span>
+        </div>
+        <div className="contItem">
+          <FiMail size={'25px'} style={{ marginRight: '5px' }} />
+          <span>email:</span>
+          <span>asdas@gmail.com</span>
+        </div>
+      </div>
+
+    </div>
   )
 }
 

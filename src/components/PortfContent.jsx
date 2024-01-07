@@ -3,7 +3,7 @@ import { MyContext } from '../Context.jsx';
 import '../styles/Components/PortfContent.scss';
 import PortfCard from './PortfCard.jsx';
 
-function PortfContent() {
+function PortfContent({ setOpenedPhoneSlider }) {
   const { projectsInfo } = useContext(MyContext);
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -19,10 +19,10 @@ function PortfContent() {
 
   return (
     <>
-      <h2 style={{ marginTop: '20px', fontSize: '20px' }}>Мої проекти</h2>
+      <h2 className='infoH2 '>Мої проекти</h2>
       <div className='portfContent'>
         {selectedProjects.map((project, index) => (
-          <PortfCard img={project.projectPhotos[0]} name={project.projectName} key={index} id={project.projectIndex} />
+          <PortfCard img={project.projectPhotos[0]} name={project.projectName} key={index} id={project.projectIndex} setOpenedPhoneSlider={setOpenedPhoneSlider} />
         ))}
       </div>
       <div className="dotsCont">
