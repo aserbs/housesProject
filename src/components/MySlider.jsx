@@ -24,13 +24,18 @@ const slidesContainerStyles = {
 
 
 
-const MySlider = ({ slides, parentWidth, currentProject, setActivePortf, openedPhoneSlider,
-  setOpenedPhoneSlider }) => {
+const MySlider = ({ slides, parentWidth, currentProject, setActivePortf,
+  setShowPopupGallery }) => {
   currentProject = currentProject - 1;
   const timerRef = useRef(null);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
+
+
+  useEffect(() => {
+    setCurrentIndex(0)
+  }, [currentProject])
 
 
   const goToPrevious = () => {
@@ -138,7 +143,7 @@ const MySlider = ({ slides, parentWidth, currentProject, setActivePortf, openedP
               <span>{slides[currentProject].info}</span>
             </div>
           </div>
-          {/* <button className='about-btn'>more about this project</button> */}
+          <button className='about-btn' onClick={() => setShowPopupGallery(true)}>Збільшити фото проєктів</button>
         </div>
       </div>
     </div>

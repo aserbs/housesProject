@@ -91,10 +91,10 @@ import parkImg1 from './images/parkland/1.jpg';
 import parkImg2 from './images/parkland/2.jpg';
 import parkImg3 from './images/parkland/3.jpg';
 import parkImg4 from './images/parkland/4.jpg';
-import parkImg5 from './images/evromisto/5.jpg';
-import parkImg6 from './images/evromisto/6.jpg';
-import parkImg7 from './images/evromisto/7.jpg';
-import parkImg8 from './images/evromisto/8.jpg';
+import parkImg5 from './images/parkland/5.jpg';
+import parkImg6 from './images/parkland/6.jpg';
+import parkImg7 from './images/parkland/7.jpg';
+import parkImg8 from './images/parkland/8.jpg';
 
 
 export const MyContext = React.createContext();

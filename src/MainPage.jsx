@@ -9,12 +9,14 @@ import { MyContext } from './Context';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import PortfolioPage from './PortfolioPage';
 import ShowProjectPage from './ShowProjectPage';
+import PopupGallery from './components/PopupGallery';
 
 function MainPage({ activeNavId, handleNavClick }) {
 
     const { projectsInfo, currentProject } = useContext(MyContext);
 
     const [openedPhoneSlider, setOpenedPhoneSlider] = useState(false);
+    const [showPopupGallery, setShowPopupGallery] = useState(false);
 
     return (
 
@@ -63,12 +65,17 @@ function MainPage({ activeNavId, handleNavClick }) {
                     slides={projectsInfo}
                     currentProject={currentProject}
                     parentWidth={440}
-                    openedPhoneSlider={openedPhoneSlider}
+                    setShowPopupGallery={setShowPopupGallery}
                     setOpenedPhoneSlider={setOpenedPhoneSlider}
                 />
 
             </div>
-
+            <PopupGallery
+                projectsInfo={projectsInfo}
+                currentProject={currentProject}
+                isShowPopup={showPopupGallery}
+                setShowPopup={setShowPopupGallery}
+            />
 
         </div>
 

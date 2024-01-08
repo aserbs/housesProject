@@ -1,0 +1,48 @@
+.popupGallery {
+    display: none;
+    position: absolute;
+    background-color: rgba($color: #000000, $alpha: 0.88);
+
+    z-index: 1023;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    // justify-content: center;
+    // align-items: center;
+
+    .close-btn {
+        position: absolute;
+        z-index: 1024;
+        right: 20px;
+        top: 20px;
+        color: white;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+    .galleryContent {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            object-fit: contain;
+            width: 80%;
+            height: 90%;
+        }
+        button {
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 30px;
+        }
+    }
+}
+
+.galleryOpened {
+    display: flex;
+}
