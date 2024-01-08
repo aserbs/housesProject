@@ -11,7 +11,7 @@ const slideStyles = {
   height: '87%',
   // objectFit: 'cover',
   backgroundSize: 'cover',
-
+  backgroundPosition: 'center'
 }
 
 const slidesContainerStyles = {
@@ -65,7 +65,7 @@ const MySlider = ({ slides, parentWidth, currentProject, setActivePortf, openedP
 
   const getSlidesContainerStylesWithWidth = () => ({
     ...slidesContainerStyles,
-    width: parentWidth * slides.length,
+    width: parentWidth * slides[currentProject].projectPhotos.length,
     transform: `translateX(${-(currentIndex * parentWidth)}px)`,
   });
 
