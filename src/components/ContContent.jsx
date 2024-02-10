@@ -14,13 +14,8 @@ const ContContent = () => {
         <div className="contItem">
           <FiPhone size={"20px"} style={{ marginRight: "5px" }} />
           <span>телефон:</span>
-          <span>+380996164208</span>
+          <span>+380989499990</span>
         </div>
-        {/* <div className="contItem">
-          <FaInstagram size={'20px'} style={{ marginRight: '5px' }} />
-          <span>inst:</span>
-          <span>@asdasd</span>
-        </div> */}
         <div className="contItem">
           <PiTelegramLogo size={"20px"} style={{ marginRight: "5px" }} />
           <span>telegram:</span>
