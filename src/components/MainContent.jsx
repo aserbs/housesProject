@@ -1,23 +1,27 @@
 import React from 'react'
 import '../App.scss'
+import ContContent from './ContContent';
 import '../styles/Components/MainContent.scss'
 const MainContent = ({ handleNavClick }) => {
   return (
-    <div className='main-content'>
-      <h2 className='typewriter'>WE CREATE SPACE
-        FOR LIVING </h2>
+    <div className='main-content' style={{ fontSize: '17px', width: '80%', textAlign: 'justify' }}>
+      {/* <h2 className=''>WE CREATE SPACE
+        FOR LIVING </h2> */}
+      <p className='typewriter'>Твій ремонт / Твій комфорт</p>
       <p>
-        MONO architects are experts in creating stylish, functional public spaces and residential interiors.
-        Regardless of the project purpose, we strive to create a well rounded product: each design element has a specific purpose,
-        there is nothing superfluous. We blend a minimalism
-        approach with modern developments and innovations in order to achieve the perfect balance of comfort and aesthetics.
+        <span style={{ marginLeft: '30px' }}></span>Наша філософія проста, максимізувати потенціал нерухомості в рамках бюджету клієнта, будь то простий ремонт або елітне оздоблення.
+
       </p>
-      <div className='btns_cont'>
-        {/* <button className='btn-mono' onClick={() => handleNavClick('navContact')}>Зв'язатись зі мною</button>
-        <button className='btn-mono' onClick={() => handleNavClick('navPortfolio')}>Мої проекти</button> */}
-      </div>
+      <p>
+        <span style={{ marginLeft: '30px' }}></span> Ми будуємо міцні, довірчі відносини з нашими клієнтами за допомогою чесних, професійних та творчих консультацій, передового дизайну, майстерності
+        співробітників та зважених будівельних рішень.
+      </p>
+      <p>
 
-
+        <span style={{ marginLeft: '30px' }}></span> Забезпечуючи повний спектр послуг, ми виконуємо всі етапи ремонту – від первинного планування та створення дизайну до остаточної реалізації проекту,
+        включно з підбором матеріалів, виконанням будівельних робіт та меблюванням.
+      </p>
+      <ContContent />
     </div>
   )
 }

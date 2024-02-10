@@ -70,16 +70,27 @@ header {
 }
 
 .logo {
-    border: 1px solid black;
-}
-
-.logo svg {
     width: 48px;
     height: 49px;
+    border-bottom: 1px solid #d0d0cf;
+    @include tablet {
+        height: 50px;
+    }
+    @include phone {
+        padding-left: 10px;
+        height: 49px;
+    }
+}
+
+.logo img {
+    width: 46px;
+    object-fit: contain;
+    height: 46px;
     display: flex;
     align-items: center;
 
     @include phone {
+        padding-top: 4px;
         width: 40px;
         height: 41px;
     }

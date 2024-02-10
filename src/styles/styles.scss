@@ -1,11 +1,15 @@
-@import 'reset';
-@import 'mixins';
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=M+PLUS+1:wght@400;500;600&family=Montserrat&family=Open+Sans&display=swap');
+@import "reset";
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=M+PLUS+1:wght@400;500;600&family=Montserrat&family=Open+Sans&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    // font-family: "Rubik", sans-serif;
+    font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 19px;
     @include tablet {
         font-size: 14px;
     }

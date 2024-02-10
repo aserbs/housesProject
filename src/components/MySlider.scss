@@ -21,7 +21,7 @@
 
 .openedSlider {
     @include phone {
-        margin-top: 20px;
+        // margin-top: 20px;
         display: flex;
     }
 }
@@ -107,7 +107,7 @@
 }
 
 .about-btn {
-    margin-top: 10px;
+    margin-top: 30px;
     padding: 0;
 
     outline: none;
@@ -203,6 +203,7 @@
 
 .slider_info__container {
     padding: 0 20px;
+    width: 70%;
 
     @include phone {
         display: flex;
@@ -214,8 +215,13 @@
 
 .slider_info__h2p {
     @include phone {
+        margin-top: 20px;
         text-align: center;
     }
+}
+.littleInfo {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .dotsContainerStyles {
