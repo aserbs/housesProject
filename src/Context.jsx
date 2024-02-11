@@ -1,100 +1,100 @@
 import React from "react";
 
 // metropolice
-import metroImg1 from "./images/metropolis/metro1.jpg";
-import metroImg2 from "./images/metropolis/metro2.jpg";
-import metroImg3 from "./images/metropolis/metro3.jpg";
-import metroImg4 from "./images/metropolis/metro4.jpg";
-import metroImg5 from "./images/metropolis/metro5.jpg";
-import metroImg6 from "./images/metropolis/metro6.jpg";
-import metroImg7 from "./images/metropolis/metro7.jpg";
-import metroImg8 from "./images/metropolis/metro8.jpg";
-import metroImg9 from "./images/metropolis/metro9.jpg";
-import metroImg10 from "./images/metropolis/metro10.jpg";
-import metroImg11 from "./images/metropolis/metro11.jpg";
-import metroImg12 from "./images/metropolis/metro12.jpg";
-import metroImg13 from "./images/metropolis/metro13.jpg";
+import metroImg1 from "./images/metropolis/metro1-min.jpg";
+import metroImg2 from "./images/metropolis/metro2-min.jpg";
+import metroImg3 from "./images/metropolis/metro3-min.jpg";
+import metroImg4 from "./images/metropolis/metro4-min.jpg";
+import metroImg5 from "./images/metropolis/metro5-min.jpg";
+import metroImg6 from "./images/metropolis/metro6-min.jpg";
+import metroImg7 from "./images/metropolis/metro7-min.jpg";
+import metroImg8 from "./images/metropolis/metro8-min.jpg";
+import metroImg9 from "./images/metropolis/metro9-min.jpg";
+import metroImg10 from "./images/metropolis/metro10-min.jpg";
+import metroImg11 from "./images/metropolis/metro11-min.jpg";
+import metroImg12 from "./images/metropolis/metro12-min.jpg";
+import metroImg13 from "./images/metropolis/metro13-min.jpg";
 
 //zol13
-import zol13Img1 from "./images/zol13/1.jpg";
-import zol13Img2 from "./images/zol13/2.jpg";
-import zol13Img3 from "./images/zol13/3.jpg";
-import zol13Img4 from "./images/zol13/4.jpg";
-import zol13Img5 from "./images/zol13/5.jpg";
-import zol13Img6 from "./images/zol13/6.jpg";
-import zol13Img7 from "./images/zol13/7.jpg";
-import zol13Img8 from "./images/zol13/8.jpg";
-import zol13Img9 from "./images/zol13/9.jpg";
-import zol13Img10 from "./images/zol13/10.jpg";
-import zol13Img11 from "./images/zol13/11.jpg";
-import zol13Img12 from "./images/zol13/12.jpg";
+import zol13Img1 from "./images/zol13/1-min.jpg";
+import zol13Img2 from "./images/zol13/2-min.jpg";
+import zol13Img3 from "./images/zol13/3-min.jpg";
+import zol13Img4 from "./images/zol13/4-min.jpg";
+import zol13Img5 from "./images/zol13/5-min.jpg";
+import zol13Img6 from "./images/zol13/6-min.jpg";
+import zol13Img7 from "./images/zol13/7-min.jpg";
+import zol13Img8 from "./images/zol13/8-min.jpg";
+import zol13Img9 from "./images/zol13/9-min.jpg";
+import zol13Img10 from "./images/zol13/10-min.jpg";
+import zol13Img11 from "./images/zol13/11-min.jpg";
+import zol13Img12 from "./images/zol13/12-min.jpg";
 
 // zol14
-import zol14Img1 from "./images/zol14/1.jpg";
-import zol14Img2 from "./images/zol14/2.jpg";
-import zol14Img3 from "./images/zol14/3.jpg";
-import zol14Img4 from "./images/zol14/4.jpg";
-import zol14Img5 from "./images/zol14/5.jpg";
-import zol14Img6 from "./images/zol14/6.jpg";
-import zol14Img7 from "./images/zol14/7.jpg";
-import zol14Img8 from "./images/zol14/8.jpg";
-import zol14Img9 from "./images/zol14/9.jpg";
-import zol14Img10 from "./images/zol14/10.jpg";
-import zol14Img12 from "./images/zol14/12.jpg";
-import zol14Img13 from "./images/zol14/13.jpg";
-import zol14Img14 from "./images/zol14/14.jpg";
-import zol14Img15 from "./images/zol14/15.jpg";
-import zol14Img16 from "./images/zol14/16.jpg";
+import zol14Img1 from "./images/zol14/1-min.jpg";
+import zol14Img2 from "./images/zol14/2-min.jpg";
+import zol14Img3 from "./images/zol14/3-min.jpg";
+import zol14Img4 from "./images/zol14/4-min.jpg";
+import zol14Img5 from "./images/zol14/5-min.jpg";
+import zol14Img6 from "./images/zol14/6-min.jpg";
+import zol14Img7 from "./images/zol14/7-min.jpg";
+import zol14Img8 from "./images/zol14/8-min.jpg";
+import zol14Img9 from "./images/zol14/9-min.jpg";
+import zol14Img10 from "./images/zol14/10-min.jpg";
+import zol14Img12 from "./images/zol14/12-min.jpg";
+import zol14Img13 from "./images/zol14/13-min.jpg";
+import zol14Img14 from "./images/zol14/14-min.jpg";
+import zol14Img15 from "./images/zol14/15-min.jpg";
+import zol14Img16 from "./images/zol14/16-min.jpg";
 
 // itOffice
-import itOfImg1 from "./images/itoffice/1.jpg";
-import itOfImg2 from "./images/itoffice/2.jpg";
-import itOfImg3 from "./images/itoffice/3.jpg";
-import itOfImg4 from "./images/itoffice/4.jpg";
-import itOfImg5 from "./images/itoffice/5.jpg";
-import itOfImg6 from "./images/itoffice/6.jpg";
-import itOfImg7 from "./images/itoffice/7.jpg";
-import itOfImg8 from "./images/itoffice/8.jpg";
-import itOfImg9 from "./images/itoffice/9.jpg";
+import itOfImg1 from "./images/itoffice/1-min.jpg";
+import itOfImg2 from "./images/itoffice/2-min.jpg";
+import itOfImg3 from "./images/itoffice/3-min.jpg";
+import itOfImg4 from "./images/itoffice/4-min.jpg";
+import itOfImg5 from "./images/itoffice/5-min.jpg";
+import itOfImg6 from "./images/itoffice/6-min.jpg";
+import itOfImg7 from "./images/itoffice/7-min.jpg";
+import itOfImg8 from "./images/itoffice/8-min.jpg";
+import itOfImg9 from "./images/itoffice/9-min.jpg";
 
 // offices
-import ofImg1 from "./images/office/1.jpg";
-import ofImg2 from "./images/office/2.jpg";
-import ofImg3 from "./images/office/3.jpg";
-import ofImg4 from "./images/office/4.jpg";
-import ofImg5 from "./images/office/5.jpg";
-import ofImg6 from "./images/office/6.jpg";
-import ofImg7 from "./images/office/7.jpg";
-import ofImg8 from "./images/office/8.jpg";
-import ofImg9 from "./images/office/9.jpg";
-import ofImg10 from "./images/office/10.jpg";
-import ofImg11 from "./images/office/11.jpg";
-import ofImg12 from "./images/office/12.jpg";
-import ofImg13 from "./images/office/13.jpg";
+import ofImg1 from "./images/office/1-min.jpg";
+import ofImg2 from "./images/office/2-min.jpg";
+import ofImg3 from "./images/office/3-min.jpg";
+import ofImg4 from "./images/office/4-min.jpg";
+import ofImg5 from "./images/office/5-min.jpg";
+import ofImg6 from "./images/office/6-min.jpg";
+import ofImg7 from "./images/office/7-min.jpg";
+import ofImg8 from "./images/office/8-min.jpg";
+import ofImg9 from "./images/office/9-min.jpg";
+import ofImg10 from "./images/office/10-min.jpg";
+import ofImg11 from "./images/office/11-min.jpg";
+import ofImg12 from "./images/office/12-min.jpg";
+import ofImg13 from "./images/office/13-min.jpg";
 
 // evromisto
 
-import evroImg1 from "./images/evromisto/1.jpg";
-import evroImg2 from "./images/evromisto/2.jpg";
-import evroImg3 from "./images/evromisto/3.jpg";
-import evroImg4 from "./images/evromisto/4.jpg";
-import evroImg5 from "./images/evromisto/5.jpg";
-import evroImg6 from "./images/evromisto/6.jpg";
-import evroImg7 from "./images/evromisto/7.jpg";
-import evroImg8 from "./images/evromisto/8.jpg";
-import evroImg9 from "./images/evromisto/9.jpg";
-import evroImg10 from "./images/evromisto/10.jpg";
+import evroImg1 from "./images/evromisto/1-min.jpg";
+import evroImg2 from "./images/evromisto/2-min.jpg";
+import evroImg3 from "./images/evromisto/3-min.jpg";
+import evroImg4 from "./images/evromisto/4-min.jpg";
+import evroImg5 from "./images/evromisto/5-min.jpg";
+import evroImg6 from "./images/evromisto/6-min.jpg";
+import evroImg7 from "./images/evromisto/7-min.jpg";
+import evroImg8 from "./images/evromisto/8-min.jpg";
+import evroImg9 from "./images/evromisto/9-min.jpg";
+import evroImg10 from "./images/evromisto/10-min.jpg";
 
 // parkland
 
-import parkImg1 from "./images/parkland/1.jpg";
-import parkImg2 from "./images/parkland/2.jpg";
-import parkImg3 from "./images/parkland/3.jpg";
-import parkImg4 from "./images/parkland/4.jpg";
-import parkImg5 from "./images/parkland/5.jpg";
-import parkImg6 from "./images/parkland/6.jpg";
-import parkImg7 from "./images/parkland/7.jpg";
-import parkImg8 from "./images/parkland/8.jpg";
+import parkImg1 from "./images/parkland/1-min.jpg";
+import parkImg2 from "./images/parkland/2-min.jpg";
+import parkImg3 from "./images/parkland/3-min.jpg";
+import parkImg4 from "./images/parkland/4-min.jpg";
+import parkImg5 from "./images/parkland/5-min.jpg";
+import parkImg6 from "./images/parkland/6-min.jpg";
+import parkImg7 from "./images/parkland/7-min.jpg";
+import parkImg8 from "./images/parkland/8-min.jpg";
 
 export const MyContext = React.createContext();
 
@@ -143,7 +143,7 @@ export const MyProvider = ({ children }) => {
       square: "204,35 м2",
       duration: "8 місяців",
       year: "2018-2019 р",
-      littleInfo: "Котеджне містечко “Zoloche”, Київська обл., с. Вишенки",
+      littleInfo: "Котеджне містечко “Zoloche”,\nКиївська обл., с. Вишенки",
     },
     {
       projectIndex: 3,
@@ -168,7 +168,7 @@ export const MyProvider = ({ children }) => {
       square: "204,35 м2",
       duration: "8 місяців",
       year: "2018-2019 р",
-      littleInfo: "Котеджне містечко “Zoloche”, Київська обл., с. Вишенки",
+      littleInfo: "Котеджне містечко “Zoloche”,\nКиївська обл., с. Вишенки",
     },
     {
       projectIndex: 4,
@@ -183,7 +183,7 @@ export const MyProvider = ({ children }) => {
         itOfImg8,
         itOfImg9,
       ],
-      projectName: "Ремонт офісних приміщення для ІТ компанії",
+      projectName: "Ремонт офісних приміщеннь для ІТ компанії",
       square: "897 м2",
       duration: "4 місяці",
       year: "2020 р",
@@ -211,7 +211,7 @@ export const MyProvider = ({ children }) => {
       square: "720 м2",
       duration: "6 місяців",
       year: "2019-2020 р",
-      littleInfo: " м. Київ",
+      littleInfo: "м. Київ",
     },
     {
       projectIndex: 6,
@@ -231,7 +231,7 @@ export const MyProvider = ({ children }) => {
       square: "44,32 м2",
       duration: "3 місяці",
       year: "2022 р",
-      littleInfo: "ЖК «Євро місто 2», Київська обл., с. Крюківщина",
+      littleInfo: "ЖК «Євро місто 2»,\nКиївська обл., с. Крюківщина",
     },
     {
       projectIndex: 7,

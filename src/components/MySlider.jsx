@@ -1,9 +1,12 @@
-import React from "react";
 import "../components/MySlider.scss";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, Suspense } from "react";
 import { useCallback } from "react";
 import { useLocation } from "react-router-dom";
-
+import { IoIosArrowRoundBack } from "react-icons/io";
+import { Link } from "react-router-dom";
+function Loading() {
+  return <h2> Loading...</h2>;
+}
 const slideStyles = {
   // position: 'absolute',
   width: "100%",
@@ -83,6 +86,24 @@ const MySlider = ({
 
   return (
     <div className={hasProject ? "MySlider openedSlider" : "MySlider"}>
+      <h2
+        className={"slider_info__h2p phoneShow"}
+        style={{
+          // marginBottom: "20px",
+          fontSize: "20px",
+          fontWeight: "600",
+        }}
+      >
+        {slides[currentProject].projectName}
+      </h2>
+      <p
+        className={"slider_info__h2p littleInfo phoneShow"}
+        style={{
+          fontSize: "17px",
+        }}
+      >
+        {slides[currentProject].littleInfo}
+      </p>
       <div className="photo-container">
         <div className="sliderStyles">
           <div className="leftArrowStyles" onClick={goToPrevious}>
@@ -144,7 +165,7 @@ const MySlider = ({
           </div>
 
           <h2
-            className={"slider_info__h2p"}
+            className={"slider_info__h2p phoneNone"}
             style={{
               // marginBottom: "20px",
               fontSize: "20px",
@@ -154,7 +175,7 @@ const MySlider = ({
             {slides[currentProject].projectName}
           </h2>
           <p
-            className={"slider_info__h2p littleInfo"}
+            className={"slider_info__h2p littleInfo phoneNone"}
             style={{
               fontSize: "17px",
             }}
@@ -181,6 +202,13 @@ const MySlider = ({
           >
             Збільшити фотографії
           </button>
+          <Link
+            to={"/portfolio"}
+            className="about-btn goback"
+            onClick={() => setShowPopupGallery(true)}
+          >
+            <IoIosArrowRoundBack size={"20px"} /> Повернутись до портфоліо
+          </Link>
         </div>
       </div>
     </div>
