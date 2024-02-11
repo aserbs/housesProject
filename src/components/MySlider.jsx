@@ -99,6 +99,7 @@ const MySlider = ({
             >
               {slides[currentProject].projectPhotos.map((_, slideIndex) => (
                 <div
+                  onClick={() => setShowPopupGallery(true)}
                   key={slideIndex}
                   style={getSlideStylesWithBackground(slideIndex)}
                 ></div>

@@ -119,6 +119,7 @@
     font-weight: 500;
 
     @include phone {
+        display: none;
         margin-top: 0;
         margin-bottom: 10px;
         font-size: 1rem;
@@ -133,12 +134,14 @@
     color: lightGrey;
     cursor: pointer;
     font-size: 50px;
+    transition: 0.3s;
     @include phone {
         margin-bottom: 0;
     }
 }
 
 .activeDot {
+    transition: 0.3s;
     margin-bottom: 15px;
     margin-right: 5px;
     color: black;
@@ -215,12 +218,12 @@
 
 .slider_info__h2p {
     @include phone {
-        margin-top: 20px;
+        margin-top: 10px;
         text-align: center;
     }
 }
 .littleInfo {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
@@ -228,6 +231,7 @@
     display: flex;
 
     @include phone {
+        margin-top: 10px;
         justify-content: center;
     }
 }
