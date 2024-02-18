@@ -11,10 +11,17 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import PortfolioPage from "./PortfolioPage";
 import ShowProjectPage from "./ShowProjectPage";
 import PopupGallery from "./components/PopupGallery";
+import MainSlider from "./components/MainSlider";
+import { useEffect } from "react";
 
 function MainPage({ activeNavId, handleNavClick }) {
-  const { projectsInfo, currentProject } = useContext(MyContext);
-
+  const {
+    projectsInfo,
+    currentProject,
+    setCurrentProject,
+    projectInfoNavMain,
+    setPage,
+  } = useContext(MyContext);
   const [openedPhoneSlider, setOpenedPhoneSlider] = useState(false);
   const [showPopupGallery, setShowPopupGallery] = useState(false);
 
@@ -24,9 +31,9 @@ function MainPage({ activeNavId, handleNavClick }) {
         <div className="left_side">
           <header>
             <div className="logo">
-              <img src={logo} />
-              {/* <AiFillHome size={35} /> */}
+              <img src={logo} onClick={() => handleNavClick("navMain")} />
             </div>
+
             <nav className="deskNav">
               <span
                 id="navMain"
@@ -94,15 +101,30 @@ function MainPage({ activeNavId, handleNavClick }) {
           </div>
           <footer className="left_side__footer"></footer>
         </div>
-
-        <MySlider
-          setActivePortf={handleNavClick}
-          slides={projectsInfo}
-          currentProject={currentProject}
-          parentWidth={440}
-          setShowPopupGallery={setShowPopupGallery}
-          setOpenedPhoneSlider={setOpenedPhoneSlider}
-        />
+        {activeNavId === "navMain" ? (
+          <MainSlider
+            setPage={setPage}
+            setCurrentProject={setCurrentProject}
+            activeNavId={activeNavId}
+            setActivePortf={handleNavClick}
+            slides={projectInfoNavMain}
+            currentProject={currentProject}
+            parentWidth={440}
+            setShowPopupGallery={setShowPopupGallery}
+            setOpenedPhoneSlider={setOpenedPhoneSlider}
+          />
+        ) : (
+          <MySlider
+            setCurrentProject={setCurrentProject}
+            activeNavId={activeNavId}
+            setActivePortf={handleNavClick}
+            slides={projectsInfo}
+            currentProject={currentProject}
+            parentWidth={440}
+            setShowPopupGallery={setShowPopupGallery}
+            setOpenedPhoneSlider={setOpenedPhoneSlider}
+          />
+        )}
       </div>
       <PopupGallery
         projectsInfo={projectsInfo}

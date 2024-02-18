@@ -1,18 +1,31 @@
 import { AiFillHome } from "react-icons/ai";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { MyContext } from "./Context.jsx";
 import "./styles/Components/PortfContent.scss";
 import PortfCard from "./components/PortfCard.jsx";
 import logo from "./images/logo1.svg";
+import "./App.scss";
 function PortfolioPage({ activeNavId, handleNavClick }) {
   const { projectsInfo } = useContext(MyContext);
-
+  useEffect(() => {
+    if (window.innerWidth > 976) {
+      window.location.href = "/";
+    }
+  }, []);
   return (
     <div>
-      <header>
-        <div className="logo">
-          <img src={logo} />
+      <header
+        style={{
+          width: "100%",
+          height: "50px",
+          display: "flex",
+        }}
+      >
+        <div className="logo" onClick={() => handleNavClick("navMain")}>
+          <Link to={"/"}>
+            <img src={logo} />
+          </Link>
         </div>
 
         <nav className="phoneNav">

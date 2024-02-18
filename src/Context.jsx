@@ -252,8 +252,81 @@ export const MyProvider = ({ children }) => {
       littleInfo: "ЖК «Паркленд», м. Київ",
     },
   ]);
+  const [projectInfoNavMain, setProjectInfoNavMain] = React.useState([
+    {
+      projectIndex: 1,
+      projectPhotos: metroImg1,
+
+      projectName: "Однокімнатна квартира",
+      square: "45,07 м2",
+      duration: "4 місяці",
+      year: "2022-2023 р",
+      littleInfo: "ЖК «Метрополіс», м. Київ",
+    },
+    {
+      projectIndex: 2,
+      projectPhotos: zol13Img1,
+
+      projectName: "Приватний будинок №13",
+      square: "204,35 м2",
+      duration: "8 місяців",
+      year: "2018-2019 р",
+      littleInfo: "Котеджне містечко “Zoloche”,\nКиївська обл., с. Вишенки",
+    },
+    {
+      projectIndex: 3,
+      projectPhotos: zol14Img1,
+
+      projectName: "Приватний будинок №14",
+      square: "204,35 м2",
+      duration: "8 місяців",
+      year: "2018-2019 р",
+      littleInfo: "Котеджне містечко “Zoloche”,\nКиївська обл., с. Вишенки",
+    },
+    {
+      projectIndex: 4,
+      projectPhotos: itOfImg1,
+
+      projectName: "Ремонт офісних приміщеннь для ІТ компанії",
+      square: "897 м2",
+      duration: "4 місяці",
+      year: "2020 р",
+      littleInfo: "БЦ «Протасів», м. Київ",
+    },
+    {
+      projectIndex: 5,
+      projectPhotos: ofImg1,
+
+      projectName:
+        "Реконструкція нежитлових приміщень під офіси для державної компанії",
+      square: "720 м2",
+      duration: "6 місяців",
+      year: "2019-2020 р",
+      littleInfo: "м. Київ",
+    },
+    {
+      projectIndex: 6,
+      projectPhotos: evroImg1,
+
+      projectName: "Однокімнатна квартира",
+      square: "44,32 м2",
+      duration: "3 місяці",
+      year: "2022 р",
+      littleInfo: "ЖК «Євро місто 2»,\nКиївська обл., с. Крюківщина",
+    },
+    {
+      projectIndex: 7,
+      projectPhotos: parkImg1,
+      projectName: "Двухкімнатна  квартира",
+      square: "43,76 м2",
+      duration: "5 місяців",
+      year: "2018 р",
+      littleInfo: "ЖК «Паркленд», м. Київ",
+    },
+  ]);
 
   const [currentProject, setCurrentProject] = React.useState(1);
+  const [page, setPage] = React.useState(0);
 
   const addToArray = (item) => {
     setProjectsInfo([...projectsInfo, item]);
@@ -261,7 +334,16 @@ export const MyProvider = ({ children }) => {
 
   return (
     <MyContext.Provider
-      value={{ projectsInfo, addToArray, currentProject, setCurrentProject }}
+      value={{
+        page,
+        setPage,
+        projectsInfo,
+        addToArray,
+        currentProject,
+        setCurrentProject,
+        projectInfoNavMain,
+        setProjectInfoNavMain,
+      }}
     >
       {children}
     </MyContext.Provider>

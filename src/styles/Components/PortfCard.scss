@@ -2,7 +2,7 @@
 
 .deskPortfCard {
     display: block;
-    width: 80%;
+    width: 85%;
     @include phone {
         display: none;
     }
@@ -70,8 +70,20 @@
 
 .phonePortfCard {
     display: none;
-    width: 80%;
+    width: 85%;
     @include phone {
         display: block;
+    }
+}
+
+.activeCard {
+    .projectPreview__cont::after {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .projectPreview__cont {
+        .projInf {
+            opacity: 1;
+            color: white;
+        }
     }
 }

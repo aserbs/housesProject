@@ -1,6 +1,6 @@
 import { AiFillHome } from "react-icons/ai";
 import { Link, useParams } from "react-router-dom";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import MySlider from "./components/MySlider";
 import { MyContext } from "./Context";
 import PopupGallery from "./components/PopupGallery";
@@ -10,7 +10,14 @@ function ShowProjectPage({ activeNavId, handleNavClick }) {
   let { id } = useParams();
   let currentProject = id.startsWith(":") ? id.slice(1) : id;
   const [showPopupGallery, setShowPopupGallery] = useState(false);
+
   handleNavClick("");
+
+  useEffect(() => {
+    if (window.innerWidth > 976) {
+      window.location.href = "/";
+    }
+  }, []);
 
   return (
     <>
@@ -22,8 +29,10 @@ function ShowProjectPage({ activeNavId, handleNavClick }) {
       />
       <div>
         <header>
-          <div className="logo">
-            <img src={logo} />
+          <div className="logo" onClick={() => handleNavClick("navMain")}>
+            <Link to={"/"}>
+              <img src={logo} />
+            </Link>
           </div>
 
           <nav className="phoneNav">
