@@ -9,7 +9,7 @@ const slideStyles = {
   // position: 'absolute',
   width: "100%",
   zIndex: "10",
-  height: "87%",
+  height: "85%",
   // objectFit: 'cover',
   backgroundSize: "cover",
   backgroundPosition: "center",
@@ -87,11 +87,11 @@ const MainSlider = ({
     setPage(page);
   };
 
-  const openGallery = () => {
-    setShowPopupGallery(true);
-    setCurrentProject(currentIndex + 1);
-    openProject();
-  };
+  // const openGallery = () => {
+  //   setShowPopupGallery(true);
+  //   setCurrentProject(currentIndex + 1);
+  //   openProject();
+  // };
 
   return (
     <div className={hasProject ? "MySlider openedSlider" : "MySlider"}>
@@ -103,7 +103,7 @@ const MainSlider = ({
           fontWeight: "600",
         }}
       >
-        {slides[currentProject].projectName}
+        {slides[currentIndex].projectName}
       </h2>
       <p
         className={"slider_info__h2p littleInfo phoneShow"}
@@ -111,7 +111,7 @@ const MainSlider = ({
           fontSize: "17px",
         }}
       >
-        {slides[currentProject].littleInfo}
+        {slides[currentIndex].littleInfo}
       </p>
       <div className="photo-container">
         <div className="sliderStyles">
@@ -129,7 +129,7 @@ const MainSlider = ({
             >
               {slides.map((_, slideIndex) => (
                 <div
-                  onClick={() => openGallery()}
+                  // onClick={() => openGallery()}
                   key={slideIndex}
                   style={getSlideStylesWithBackground(slideIndex)}
                 ></div>
@@ -210,7 +210,7 @@ const MainSlider = ({
             // onClick={() => setShowPopupGallery(true)}
             onClick={() => openProject()}
           >
-            Фото цього проєкта
+            Детальніше
           </button>
           <Link
             to={"/portfolio"}

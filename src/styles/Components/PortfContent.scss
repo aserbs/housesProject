@@ -83,3 +83,18 @@ nav {
         display: flex;
     }
 }
+
+.deskPortf {
+    display: flex;
+    justify-content: center;
+    @include phone {
+        display: none;
+    }
+}
+.phonePortf {
+    display: none;
+
+    @include phone {
+        display: flex;
+    }
+}

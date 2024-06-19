@@ -1,4 +1,10 @@
-import React, { useState, Suspense, useEffect, useContext } from "react";
+import React, {
+  useState,
+  Suspense,
+  useEffect,
+  useContext,
+  useRef,
+} from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Loader from "./components/Loader";
 import { MyContext } from "./Context";
@@ -20,6 +26,15 @@ function App() {
     }
   };
 
+  // scrolls
+  const myFirstRef = useRef(null);
+  const mySecondRef = useRef(null);
+  const executeScrollToFirst = () => {
+    myFirstRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  const executeScrollToSecond = () =>
+    mySecondRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+
   return (
     <Router>
       <Suspense fallback={<Loader />}>
@@ -30,6 +45,10 @@ function App() {
               <MainPage
                 activeNavId={activeNavId}
                 handleNavClick={handleNavClick}
+                firstRef={myFirstRef}
+                secondRef={mySecondRef}
+                executeScrollToFirst={executeScrollToFirst}
+                executeScrollToSecond={executeScrollToSecond}
               />
             }
           />
@@ -48,6 +67,8 @@ function App() {
               <ShowProjectPage
                 activeNavId={activeNavId}
                 handleNavClick={handleNavClick}
+                executeScrollToFirst={executeScrollToFirst}
+                executeScrollToSecond={executeScrollToSecond}
               />
             }
           />

@@ -1,17 +1,15 @@
 import "../components/MySlider.scss";
-import { useState, useRef, useEffect, Suspense } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useCallback } from "react";
 import { useLocation } from "react-router-dom";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { Link } from "react-router-dom";
-function Loading() {
-  return <h2> Loading...</h2>;
-}
+
 const slideStyles = {
   // position: 'absolute',
   width: "100%",
   zIndex: "10",
-  height: "87%",
+  height: "85%",
   // objectFit: 'cover',
   backgroundSize: "cover",
   backgroundPosition: "center",
@@ -36,7 +34,6 @@ const MySlider = ({
   const timerRef = useRef(null);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(1);
 
   useEffect(() => {
     setCurrentIndex(0);
@@ -120,7 +117,7 @@ const MySlider = ({
             >
               {slides[currentProject].projectPhotos.map((_, slideIndex) => (
                 <div
-                  onClick={() => setShowPopupGallery(true)}
+                  // onClick={() => setShowPopupGallery(true)}
                   key={slideIndex}
                   style={getSlideStylesWithBackground(slideIndex)}
                 ></div>

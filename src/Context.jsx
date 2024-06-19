@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 // metropolice
 import metroImg1 from "./images/metropolis/metro1-min.jpg";
@@ -14,6 +14,32 @@ import metroImg10 from "./images/metropolis/metro10-min.jpg";
 import metroImg11 from "./images/metropolis/metro11-min.jpg";
 import metroImg12 from "./images/metropolis/metro12-min.jpg";
 import metroImg13 from "./images/metropolis/metro13-min.jpg";
+// cof1
+import cof1Img1 from "./images/cof1/1.jpg";
+import cof1Img2 from "./images/cof1/2.jpg";
+import cof1Img3 from "./images/cof1/3.jpg";
+import cof1Img4 from "./images/cof1/4.jpg";
+import cof1Img5 from "./images/cof1/5.jpg";
+import cof1Img6 from "./images/cof1/6.jpg";
+import cof1Img7 from "./images/cof1/7.jpg";
+import cof1Img8 from "./images/cof1/8.jpg";
+import cof1Img9 from "./images/cof1/9.jpg";
+import cof1Img10 from "./images/cof1/10.jpg";
+import cof1Img11 from "./images/cof1/11.jpg";
+
+// tym
+import tymImg1 from "./images/tym/1.jpg";
+import tymImg3 from "./images/tym/3.jpg";
+import tymImg5 from "./images/tym/5.jpg";
+import tymImg10 from "./images/tym/10.jpg";
+import tymImg13 from "./images/tym/13.jpg";
+import tymImg14 from "./images/tym/14.jpg";
+import tymImg15 from "./images/tym/15.jpg";
+import tymImg16 from "./images/tym/16.jpg";
+import tymImg17 from "./images/tym/17.jpg";
+import tymImg18 from "./images/tym/18.jpg";
+import tymImg19 from "./images/tym/19.jpg";
+import tymImg20 from "./images/tym/20.jpg";
 
 //zol13
 import zol13Img1 from "./images/zol13/1-min.jpg";
@@ -103,6 +129,27 @@ export const MyProvider = ({ children }) => {
     {
       projectIndex: 1,
       projectPhotos: [
+        cof1Img1,
+        cof1Img2,
+        cof1Img3,
+        cof1Img4,
+        cof1Img5,
+        cof1Img6,
+        cof1Img7,
+        cof1Img8,
+        cof1Img9,
+        cof1Img10,
+        cof1Img11,
+      ],
+      projectName: `Кав'ярня "Сервант"`,
+      square: "31,17 м2",
+      duration: "3 місяці",
+      year: "2024 р",
+      littleInfo: "м. Київ, вулиця Кирилівська,34/38",
+    },
+    {
+      projectIndex: 2,
+      projectPhotos: [
         metroImg1,
         metroImg2,
         metroImg3,
@@ -124,7 +171,29 @@ export const MyProvider = ({ children }) => {
       littleInfo: "ЖК «Метрополіс», м. Київ",
     },
     {
-      projectIndex: 2,
+      projectIndex: 3,
+      projectPhotos: [
+        tymImg1,
+        tymImg3,
+        tymImg5,
+        tymImg10,
+        tymImg13,
+        tymImg14,
+        tymImg15,
+        tymImg16,
+        tymImg17,
+        tymImg18,
+        tymImg19,
+        tymImg20,
+      ],
+      projectName: "Трьохкімнатна квартира",
+      square: "78,52 м2",
+      duration: "6 місяці",
+      year: "2023 р",
+      littleInfo: "Будинок Бикова, м. Київ",
+    },
+    {
+      projectIndex: 4,
       projectPhotos: [
         zol13Img1,
         zol13Img2,
@@ -146,15 +215,16 @@ export const MyProvider = ({ children }) => {
       littleInfo: "Котеджне містечко “Zoloche”,\nКиївська обл., с. Вишенки",
     },
     {
-      projectIndex: 3,
+      projectIndex: 5,
       projectPhotos: [
+        zol14Img7,
         zol14Img1,
         zol14Img2,
         zol14Img3,
         zol14Img4,
         zol14Img5,
         zol14Img6,
-        zol14Img7,
+
         zol14Img8,
         zol14Img9,
         zol14Img10,
@@ -171,7 +241,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "Котеджне містечко “Zoloche”,\nКиївська обл., с. Вишенки",
     },
     {
-      projectIndex: 4,
+      projectIndex: 6,
       projectPhotos: [
         itOfImg1,
         itOfImg2,
@@ -190,7 +260,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "БЦ «Протасів», м. Київ",
     },
     {
-      projectIndex: 5,
+      projectIndex: 7,
       projectPhotos: [
         ofImg1,
         ofImg2,
@@ -214,7 +284,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "м. Київ",
     },
     {
-      projectIndex: 6,
+      projectIndex: 8,
       projectPhotos: [
         evroImg1,
         evroImg2,
@@ -234,7 +304,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "ЖК «Євро місто 2»,\nКиївська обл., с. Крюківщина",
     },
     {
-      projectIndex: 7,
+      projectIndex: 9,
       projectPhotos: [
         parkImg1,
         parkImg2,
@@ -251,10 +321,21 @@ export const MyProvider = ({ children }) => {
       year: "2018 р",
       littleInfo: "ЖК «Паркленд», м. Київ",
     },
+    ,
   ]);
   const [projectInfoNavMain, setProjectInfoNavMain] = React.useState([
     {
       projectIndex: 1,
+      projectPhotos: cof1Img1,
+
+      projectName: `Кав'ярня "Сервант"`,
+      square: "31,17 м2",
+      duration: "3 місяці",
+      year: "2024 р",
+      littleInfo: "м. Київ, вулиця Кирилівська, 34/38",
+    },
+    {
+      projectIndex: 2,
       projectPhotos: metroImg1,
 
       projectName: "Однокімнатна квартира",
@@ -264,8 +345,18 @@ export const MyProvider = ({ children }) => {
       littleInfo: "ЖК «Метрополіс», м. Київ",
     },
     {
-      projectIndex: 2,
-      projectPhotos: zol13Img1,
+      projectIndex: 3,
+      projectPhotos: tymImg1,
+
+      projectName: "Трьохкімнатна квартира",
+      square: "78,52 м2",
+      duration: "6 місяці",
+      year: "2023 р",
+      littleInfo: "Будинок Бикова, м. Київ",
+    },
+    {
+      projectIndex: 4,
+      projectPhotos: zol13Img8,
 
       projectName: "Приватний будинок №13",
       square: "204,35 м2",
@@ -274,7 +365,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "Котеджне містечко “Zoloche”,\nКиївська обл., с. Вишенки",
     },
     {
-      projectIndex: 3,
+      projectIndex: 5,
       projectPhotos: zol14Img1,
 
       projectName: "Приватний будинок №14",
@@ -284,7 +375,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "Котеджне містечко “Zoloche”,\nКиївська обл., с. Вишенки",
     },
     {
-      projectIndex: 4,
+      projectIndex: 6,
       projectPhotos: itOfImg1,
 
       projectName: "Ремонт офісних приміщеннь для ІТ компанії",
@@ -294,7 +385,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "БЦ «Протасів», м. Київ",
     },
     {
-      projectIndex: 5,
+      projectIndex: 7,
       projectPhotos: ofImg1,
 
       projectName:
@@ -305,7 +396,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "м. Київ",
     },
     {
-      projectIndex: 6,
+      projectIndex: 8,
       projectPhotos: evroImg1,
 
       projectName: "Однокімнатна квартира",
@@ -315,7 +406,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "ЖК «Євро місто 2»,\nКиївська обл., с. Крюківщина",
     },
     {
-      projectIndex: 7,
+      projectIndex: 9,
       projectPhotos: parkImg1,
       projectName: "Двухкімнатна  квартира",
       square: "43,76 м2",
@@ -349,3 +440,25 @@ export const MyProvider = ({ children }) => {
     </MyContext.Provider>
   );
 };
+
+const ScrollContext = createContext();
+
+export const ScrollProvider = ({ children }) => {
+  const [scrollTo, setScrollTo] = useState(null);
+  useEffect(() => {
+    if (scrollTo) {
+      const element = document.getElementById(scrollTo);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setScrollTo(null); // Очистите цель скролла после выполнения скролла
+      }
+    }
+  }, [scrollTo, setScrollTo]);
+  return (
+    <ScrollContext.Provider value={{ scrollTo, setScrollTo }}>
+      {children}
+    </ScrollContext.Provider>
+  );
+};
+
+export const useScroll = () => useContext(ScrollContext);

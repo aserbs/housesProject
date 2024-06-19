@@ -109,7 +109,7 @@
 
 .about-btn {
     margin-top: 30px;
-    padding: 0;
+    padding: 5px 0px;
 
     outline: none;
     border: none;
@@ -131,6 +131,13 @@
     display: none;
     @include phone {
         display: flex;
+        padding: 7px 0;
+        width: 90%;
+        border: none;
+        background-color: black;
+        color: white;
+        align-items: center;
+        justify-content: center;
     }
 }
 .dotsStyle {

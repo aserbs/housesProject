@@ -70,7 +70,7 @@
 
 .phonePortfCard {
     display: none;
-    width: 85%;
+    width: 95%;
     @include phone {
         display: block;
     }
@@ -79,6 +79,18 @@
 .activeCard {
     .projectPreview__cont::after {
         background: rgba(0, 0, 0, 0.5);
+    }
+    .projectPreview__cont {
+        .projInf {
+            opacity: 1;
+            color: white;
+        }
+    }
+}
+
+@include phone {
+    .projectPreview__cont::after {
+        background: rgba(0, 0, 0, 0.4);
     }
     .projectPreview__cont {
         .projInf {

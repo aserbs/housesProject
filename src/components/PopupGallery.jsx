@@ -39,6 +39,7 @@ function PopupGallery({
       <div className="galleryContent">
         <img
           src={projectsInfo[currentProject].projectPhotos[currentIndex]}
+          alt="projectImage"
         ></img>
         <div className="btns-cont">
           <button onClick={() => handlePrevious()}>❮</button>

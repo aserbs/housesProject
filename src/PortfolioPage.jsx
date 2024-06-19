@@ -24,7 +24,7 @@ function PortfolioPage({ activeNavId, handleNavClick }) {
       >
         <div className="logo" onClick={() => handleNavClick("navMain")}>
           <Link to={"/"}>
-            <img src={logo} />
+            <img src={logo} alt="logo" />
           </Link>
         </div>
 

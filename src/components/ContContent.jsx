@@ -1,11 +1,11 @@
 import React from "react";
 import "../styles/Components/ContContent.scss";
-import { FaInstagram } from "react-icons/fa";
+
 import { PiTelegramLogo } from "react-icons/pi";
 import { FiMail, FiPhone } from "react-icons/fi";
-const ContContent = () => {
+const ContContent = ({ usref }) => {
   return (
-    <div className="contacts_cont">
+    <div className="contacts_cont" ref={usref} id="contacts">
       <h2 className="infoH2" style={{ fontSize: "18px" }}>
         Контакти для зв'язку
       </h2>
