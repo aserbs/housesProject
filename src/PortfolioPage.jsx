@@ -1,6 +1,5 @@
-import { AiFillHome } from "react-icons/ai";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import React, { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useContext, useEffect } from "react";
 import { MyContext } from "./Context.jsx";
 import "./styles/Components/PortfContent.scss";
 import PortfCard from "./components/PortfCard.jsx";

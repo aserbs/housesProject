@@ -14,7 +14,7 @@ const ShowProjectPage = React.lazy(() => import("./ShowProjectPage"));
 
 function App() {
   const [activeNavId, setActiveNavId] = useState("navMain");
-  const { currentProject, setCurrentProject, setPage } = useContext(MyContext);
+  const { setCurrentProject, setPage } = useContext(MyContext);
   useEffect(() => {
     activeNavId === "navMain" && setCurrentProject(1);
     setPage(1);

@@ -1,6 +1,18 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 export const MyContext = React.createContext();
+const cof3Images = Array.from(
+  { length: 8 },
+  (_, i) => `https://tviyremont.com.ua/static/images/cof3Images/${i + 1}.webp`
+);
+const faynaTown = Array.from(
+  { length: 10 },
+  (_, i) => `https://tviyremont.com.ua/static/images/faynaTown/${i + 1}.webp`
+);
+const officeSich = Array.from(
+  { length: 10 },
+  (_, i) => `https://tviyremont.com.ua/static/images/officeSich/${i + 1}.webp`
+);
 const cof2Images = Array.from(
   { length: 4 },
   (_, i) => `https://tviyremont.com.ua/static/images/cof2/${i + 1}.webp`
@@ -50,6 +62,33 @@ export const MyProvider = ({ children }) => {
   const [projectsInfo, setProjectsInfo] = React.useState([
     {
       projectIndex: 1,
+      projectPhotos: cof3Images,
+      projectName: `Кав'ярня "Сервант" - 3`,
+      square: "29,7 м²",
+      duration: "2,5 місяці",
+      year: "2025 р",
+      littleInfo: "м. Київ, вул. Срібнокільська 8а",
+    },
+    {
+      projectIndex: 2,
+      projectPhotos: faynaTown,
+      projectName: `Двокімнатна  квартира`,
+      square: "62 м²",
+      duration: "7 місяців",
+      year: "2025 р",
+      littleInfo: "ЖК Файна Таун, м. Київ",
+    },
+    {
+      projectIndex: 3,
+      projectPhotos: officeSich,
+      projectName: `Офісне приміщення`,
+      square: "120 м²",
+      duration: "2 місяці",
+      year: "2025 р",
+      littleInfo: "м. Київ, вулиця Січових Стрільців, 21",
+    },
+    {
+      projectIndex: 4,
       projectPhotos: cof2Images,
       projectName: `Кав'ярня "Сервант" - 2`,
       square: "9,21 м²",
@@ -58,7 +97,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "м. Київ, пр-т Академіка Глушкова 29",
     },
     {
-      projectIndex: 2,
+      projectIndex: 5,
       projectPhotos: cofPattern,
       projectName: `Оновлення кав'ярні "Pattern"`,
       square: "56,48 м²",
@@ -67,7 +106,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "м. Київ, вул. Михайла Омеляновича-Павленка, 18/20",
     },
     {
-      projectIndex: 3,
+      projectIndex: 6,
       projectPhotos: cof1Images,
       projectName: `Кав'ярня "Сервант" - 1`,
       square: "31,17 м²",
@@ -76,7 +115,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "м. Київ, вулиця Кирилівська, 34/38",
     },
     {
-      projectIndex: 4,
+      projectIndex: 7,
       projectPhotos: metroImages,
       projectName: "Однокімнатна квартира",
       square: "45,07 м²",
@@ -85,7 +124,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "ЖК «Метрополіс», м. Київ",
     },
     {
-      projectIndex: 5,
+      projectIndex: 8,
       projectPhotos: tymImages,
       projectName: "Трьохкімнатна квартира",
       square: "78,52 м²",
@@ -94,7 +133,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "Будинок Бикова, м. Київ",
     },
     {
-      projectIndex: 6,
+      projectIndex: 9,
       projectPhotos: zol13Images,
       projectName: "Приватний будинок №13",
       square: "204,35 м²",
@@ -103,7 +142,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "Котеджне містечко “Zoloche”,\nКиївська обл., с. Вишенки",
     },
     {
-      projectIndex: 7,
+      projectIndex: 10,
       projectPhotos: zol14Images,
       projectName: "Приватний будинок №14",
       square: "204,35 м²",
@@ -112,7 +151,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "Котеджне містечко “Zoloche”,\nКиївська обл., с. Вишенки",
     },
     {
-      projectIndex: 8,
+      projectIndex: 11,
       projectPhotos: itofficeImages,
       projectName: "Ремонт офісних приміщеннь для ІТ компанії",
       square: "897 м²",
@@ -121,7 +160,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "БЦ «Протасів», м. Київ",
     },
     {
-      projectIndex: 9,
+      projectIndex: 12,
       projectPhotos: officeImages,
       projectName:
         "Реконструкція нежитлових приміщень під офіси для державної компанії",
@@ -131,7 +170,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "м. Київ",
     },
     {
-      projectIndex: 10,
+      projectIndex: 13,
       projectPhotos: evromistoImages,
       projectName: "Однокімнатна квартира",
       square: "44,32 м²",
@@ -140,18 +179,46 @@ export const MyProvider = ({ children }) => {
       littleInfo: "ЖК «Євро місто 2»,\nКиївська обл., с. Крюківщина",
     },
     {
-      projectIndex: 11,
+      projectIndex: 14,
       projectPhotos: parkImages,
-      projectName: "Двухкімнатна  квартира",
+      projectName: "Двокімнатна  квартира",
       square: "43,76 м²",
       duration: "5 місяців",
       year: "2018 р",
       littleInfo: "ЖК «Паркленд», м. Київ",
     },
   ]);
+
   const [projectInfoNavMain, setProjectInfoNavMain] = React.useState([
     {
       projectIndex: 1,
+      projectPhotos: cof3Images[0],
+      projectName: `Кав'ярня "Сервант" - 3`,
+      square: "29,7 м²",
+      duration: "2,5 місяці",
+      year: "2025 р",
+      littleInfo: "м. Київ, вул. Срібнокільська 8а",
+    },
+    {
+      projectIndex: 2,
+      projectPhotos: faynaTown[0],
+      projectName: `Двокімнатна  квартира`,
+      square: "62 м²",
+      duration: "7 місяців",
+      year: "2025 р",
+      littleInfo: "ЖК Файна Таун, м. Київ",
+    },
+    {
+      projectIndex: 3,
+      projectPhotos: officeSich[0],
+      projectName: `Офісне приміщення`,
+      square: "120 м²",
+      duration: "2 місяці",
+      year: "2025 р",
+      littleInfo: "м. Київ, вулиця Січових Стрільців, 21",
+    },
+    {
+      projectIndex: 4,
       projectPhotos: cof2Images[0],
       projectName: `Кав'ярня "Сервант" - 2`,
       square: "9,21 м²",
@@ -160,7 +227,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "м. Київ, пр-т Академіка Глушкова 29",
     },
     {
-      projectIndex: 2,
+      projectIndex: 5,
       projectPhotos: cofPattern[0],
       projectName: `Оновлення кав'ярні "Pattern"`,
       square: "56,48 м²",
@@ -169,7 +236,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "м. Київ, вул. Михайла Омеляновича-Павленка, 18/20",
     },
     {
-      projectIndex: 3,
+      projectIndex: 6,
       projectPhotos: cof1Images[0],
 
       projectName: `Кав'ярня "Сервант" - 1`,
@@ -179,7 +246,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "м. Київ, вулиця Кирилівська, 34/38",
     },
     {
-      projectIndex: 4,
+      projectIndex: 7,
       projectPhotos: metroImages[1],
 
       projectName: "Однокімнатна квартира",
@@ -189,7 +256,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "ЖК «Метрополіс», м. Київ",
     },
     {
-      projectIndex: 5,
+      projectIndex: 8,
       projectPhotos: tymImages[0],
 
       projectName: "Трьохкімнатна квартира",
@@ -199,7 +266,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "Будинок Бикова, м. Київ",
     },
     {
-      projectIndex: 6,
+      projectIndex: 9,
       projectPhotos: zol13Images[7],
 
       projectName: "Приватний будинок №13",
@@ -209,7 +276,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "Котеджне містечко “Zoloche”,\nКиївська обл., с. Вишенки",
     },
     {
-      projectIndex: 7,
+      projectIndex: 10,
       projectPhotos: zol14Images[0],
 
       projectName: "Приватний будинок №14",
@@ -219,7 +286,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "Котеджне містечко “Zoloche”,\nКиївська обл., с. Вишенки",
     },
     {
-      projectIndex: 8,
+      projectIndex: 11,
       projectPhotos: itofficeImages[0],
 
       projectName: "Ремонт офісних приміщеннь для ІТ компанії",
@@ -229,7 +296,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "БЦ «Протасів», м. Київ",
     },
     {
-      projectIndex: 9,
+      projectIndex: 12,
       projectPhotos: officeImages[0],
 
       projectName:
@@ -240,7 +307,7 @@ export const MyProvider = ({ children }) => {
       littleInfo: "м. Київ",
     },
     {
-      projectIndex: 10,
+      projectIndex: 13,
       projectPhotos: evromistoImages[0],
 
       projectName: "Однокімнатна квартира",
@@ -250,9 +317,9 @@ export const MyProvider = ({ children }) => {
       littleInfo: "ЖК «Євро місто 2»,\nКиївська обл., с. Крюківщина",
     },
     {
-      projectIndex: 11,
+      projectIndex: 14,
       projectPhotos: parkImages[0],
-      projectName: "Двухкімнатна  квартира",
+      projectName: "Двокімнатна  квартира",
       square: "43,76 м²",
       duration: "5 місяців",
       year: "2018 р",
